@@ -1,7 +1,7 @@
 // dataLoader.js
 let data; // Ensure data is defined in the scope
 
-fetch('data.json')
+fetch('src/data/data.json')
   .then((response) => response.json())
   .then((fetchedData) => {
     data = fetchedData; // Update the global `data`
