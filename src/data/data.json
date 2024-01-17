@@ -8,7 +8,7 @@
     "tags": ["Trailer", "Explorations", "2024"],
     "category": "Landing Page",
     "language": "sv",
-    "imageUrl": "images/trailer.png",
+    "imageUrl": "public/images/trailer.png",
     "videoUrl": "public/videos/temp_trailer_720.mp4",
     "autoplay": false,
     "loop": false,
@@ -111,7 +111,7 @@
     "tags": ["Epa", "Short", "film"],
     "category": "Film",
     "language": "sv",
-    "imageUrl": "images/epa.png",
+    "imageUrl": "public/images/epa.png",
     "videoUrl": "path/to/hls/stream5.m3u8",
     "audioUrl": "path/to/audio5.mp3",
     "production": "Trafikverket",
@@ -132,7 +132,7 @@
     "tags": ["Film", "Sound Design", "Mix", "Short"],
     "category": "Film",
     "language": "sv",
-    "imageUrl": "/images/korvkiosken.jpg",
+    "imageUrl": "public//images/korvkiosken.jpg",
     "videoUrl": "path/to/hls/stream6.m3u8",
     "audioUrl": "path/to/audio6.mp3",
     "production": "Trafikverket",
@@ -152,7 +152,7 @@
     "tags": ["Film", "Sound Design", "Mix", "Short", "Recording"],
     "category": "Film",
     "language": "sv",
-    "imageUrl": "/images/vv.jpg",
+    "imageUrl": "public//images/vv.jpg",
     "videoUrl": "path/to/hls/stream7.m3u8",
     "audioUrl": "path/to/audio7.mp3",
     "production": "Stockholm University of the Arts",
@@ -173,7 +173,7 @@
     "tags": ["Film", "Sound Design", "Mix", "Short"],
     "category": "Film",
     "language": "sv",
-    "imageUrl": "/images/david.png",
+    "imageUrl": "public//images/david.png",
     "videoUrl": "path/to/hls/stream8.m3u8",
     "audioUrl": "path/to/audio8.mp3"
   },
@@ -187,7 +187,7 @@
     "tags": ["Film", "Sound Design", "Mix", "Short", "Recording"],
     "category": "Sound Design",
     "language": "sv",
-    "imageUrl": "/images/unreal.png",
+    "imageUrl": "public/images/unreal.png",
     "videoUrl": "path/to/hls/stream9.m3u8",
     "audioUrl": "path/to/audio9.mp3"
   },
@@ -209,7 +209,7 @@
     ],
     "category": "Sound Design",
     "language": "sv",
-    "imageUrl": "/images/unreal.png",
+    "imageUrl": "public//images/unreal.png",
     "videoUrl": "path/to/hls/stream9.m3u8",
     "audioUrl": "path/to/audio9.mp3"
   },
@@ -232,7 +232,7 @@
     ],
     "category": "Sound Design",
     "language": "sv",
-    "imageUrl": "/images/unreal.png",
+    "imageUrl": "public//images/unreal.png",
     "videoUrl": "path/to/hls/stream9.m3u8",
     "audioUrl": "path/to/audio9.mp3"
   },
@@ -255,7 +255,7 @@
     ],
     "category": "Interactive",
     "language": "sv",
-    "imageUrl": "images/unreal.png",
+    "imageUrl": "public/images/unreal.png",
     "videoUrl": "path/to/hls/stream9.m3u8",
     "audioUrl": "path/to/audio9.mp3"
   },
@@ -278,7 +278,7 @@
     ],
     "category": "Interactive",
     "language": "sv",
-    "imageUrl": "images/unreal.png",
+    "imageUrl": "public/images/unreal.png",
     "videoUrl": "path/to/hls/stream9.m3u8",
     "audioUrl": "path/to/audio9.mp3"
   },
@@ -301,7 +301,7 @@
     ],
     "category": "Interactive",
     "language": "sv",
-    "imageUrl": "images/krogsr.png",
+    "imageUrl": "public/images/krogsr.png",
     "videoUrl": "path/to/hls/stream9.m3u8",
     "audioUrl": "path/to/audio9.mp3"
   },
@@ -324,7 +324,7 @@
     ],
     "category": "Interactive",
     "language": "sv",
-    "imageUrl": "images/3000.png",
+    "imageUrl": "public/images/3000.png",
     "videoUrl": "path/to/hls/stream9.m3u8",
     "audioUrl": "path/to/audio9.mp3"
   },
@@ -347,7 +347,7 @@
     ],
     "category": "Interactive",
     "language": "sv",
-    "imageUrl": "images/josef.png",
+    "imageUrl": "public/images/josef.png",
     "videoUrl": "path/to/hls/stream9.m3u8",
     "audioUrl": "path/to/audio9.mp3"
   },
@@ -361,7 +361,7 @@
     "tags": ["About", "Contact"],
     "category": "About",
     "language": "sv",
-    "imageUrl": "images/josef.png",
+    "imageUrl": "public/images/josef.png",
     "videoUrl": "path/to/hls/stream9.m3u8",
     "audioUrl": "path/to/audio9.mp3"
   }
