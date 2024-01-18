@@ -1,0 +1,171 @@
+@import 'scss/bootstrap.scss'; // Import Bootstrap
+
+$page-bg-color: #c2c2c2; // Replace with your desired color
+// Define your custom variables
+$btn-bg-color: transparent;
+$btn-text-color: #060606;
+$btn-hover-color: #ff3300;
+$btn-active-color: #08d55d;
+$btn-disabled-bg-color: #ddd;
+$btn-disabled-text-color: #999;
+$input-focus-border-color: #ff3300;
+$input-focus-box-shadow: #ff3300;
+
+// Override Bootstrap variables
+$form-check-input-width: 2em;
+$form-check-min-height: $font-size-base * $line-height-base;
+$form-check-padding-start: $form-check-input-width + 1em;
+
+$form-check-input-bg: $input-bg;
+$form-check-input-border-radius: 1.55em;
+$form-check-radio-border-radius: 50%;
+$form-check-input-focus-border: $input-focus-border-color;
+$form-check-input-focus-box-shadow: $focus-ring-box-shadow;
+
+body {
+  background-color: $page-bg-color;
+}
+.btn {
+  background-color: $btn-bg-color;
+  color: $btn-text-color;
+  padding: 0px 0px;
+  font-size: 16px;
+  text-align: center;
+  cursor: pointer;
+  border: none;
+
+  &:hover {
+    color: $btn-hover-color;
+    border: none;
+  }
+
+  &:active {
+    color: $btn-active-color;
+  }
+
+  &:disabled {
+    background-color: $btn-disabled-bg-color;
+    color: $btn-disabled-text-color;
+    cursor: not-allowed;
+  }
+
+  &:focus {
+    outline: none;
+    box-shadow: none;
+  }
+}
+.btn-outline {
+  background-color: green;
+  color: $btn-text-color;
+  padding: 0px 0px;
+  font-size: 16px;
+  text-align: center;
+  cursor: pointer;
+  border: none;
+
+  &:hover {
+    color: $btn-hover-color;
+    border: none;
+  }
+
+  &:active {
+    color: $btn-active-color;
+  }
+
+  &:disabled {
+    background-color: $btn-disabled-bg-color;
+    color: $btn-disabled-text-color;
+    cursor: not-allowed;
+  }
+
+  &:focus {
+    outline: none;
+    box-shadow: none;
+  }
+}
+::placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  text-align: center;
+}
+
+:-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  text-align: center;
+}
+
+::-ms-input-placeholder {
+  /* Microsoft Edge */
+  text-align: center;
+}
+
+.btn-check:checked + .btn {
+  color: $btn-hover-color;
+  border: none;
+}
+
+.btn-check:not(:checked) + .btn:hover {
+  color: $btn-hover-color;
+  border: none;
+}
+
+.dropdown-menu {
+  background-color: $page-bg-color;
+  color: $btn-text-color;
+  font-size: 16px;
+  text-align: center;
+  border: none;
+  margin: 10px;
+}
+.dropdown-item {
+  &:active,
+  &:focus {
+    background-color: $btn-bg-color;
+    color: $btn-text-color;
+    font-size: 16px;
+    text-align: center;
+    border: none;
+  }
+  &:hover {
+    background-color: $btn-bg-color;
+    color: $btn-hover-color;
+    font-size: 16px;
+    text-align: center;
+    border: none;
+  }
+}
+
+.menu-box {
+  background-color: #a5a5a5;
+  padding: 20px;
+  margin: 20px 0;
+  border-radius: 5px;
+  // Add more styling as needed
+}
+
+.form-control {
+  background-color: $btn-bg-color;
+  border: 1px solid $btn-text-color;
+  border-color: $btn-text-color;
+  border-radius: $input-border-radius;
+  color: $input-color;
+  padding: $input-padding-y $input-padding-x;
+  font-size: $font-size-base;
+  line-height: $input-line-height;
+
+  &:focus {
+    border-color: $btn-text-color;
+    background-color: $btn-bg-color;
+    border-width: 2px;
+    box-shadow: none;
+  }
+
+  &::placeholder {
+    color: $input-placeholder-color;
+  }
+
+  &:disabled,
+  &[readonly] {
+    background-color: $input-disabled-bg;
+    opacity: 1;
+  }
+}
