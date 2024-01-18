@@ -4,6 +4,9 @@
  * Copyright 2011-2023 The Bootstrap Authors
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  */
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono&display=swap");
 :root,
 [data-bs-theme=light] {
   --bs-blue: #0d6efd;
@@ -11977,17 +11980,24 @@ textarea.form-control-lg {
   }
 }
 body {
+  font-family: "Roboto", sans-serif;
+}
+
+body {
   background-color: #c2c2c2;
 }
 
 .btn {
+  font-family: "Space Mono", monospace;
+  font-weight: 400;
+  font-size: 16px;
   background-color: transparent;
   color: #060606;
   padding: 0px 0px;
-  font-size: 16px;
   text-align: center;
   cursor: pointer;
   border: none;
+  display: inline-block;
 }
 .btn:hover {
   color: #ff3300;
@@ -12063,33 +12073,30 @@ body {
 }
 
 .dropdown-menu {
-  background-color: #c2c2c2;
-  color: #060606;
+  background-color: #a5a5a5;
+  font-family: "Space Mono", monospace;
+  font-weight: 400;
   font-size: 16px;
-  text-align: center;
+  color: #060606;
+  text-align: left;
   border: none;
-  margin: 10px;
 }
 
 .dropdown-item:active, .dropdown-item:focus {
   background-color: transparent;
   color: #060606;
-  font-size: 16px;
-  text-align: center;
   border: none;
 }
 .dropdown-item:hover {
   background-color: transparent;
   color: #ff3300;
-  font-size: 16px;
-  text-align: center;
   border: none;
 }
 
 .menu-box {
   background-color: #a5a5a5;
-  padding: 20px;
-  margin: 20px 0;
+  padding: 5px;
+  margin: 10px 0;
   border-radius: 5px;
 }
 
@@ -12118,4 +12125,19 @@ body {
 .form-control:disabled, .form-control[readonly] {
   background-color: var(--bs-secondary-bg);
   opacity: 1;
+}
+
+.clear-tags-container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.clear-tags-button {
+  font-weight: normal;
+}
+.clear-tags-button.active {
+  font-weight: 800;
+  background-color: #777777;
+  color: white;
 }/*# sourceMappingURL=buttons-test-style.css.map */

@@ -19,12 +19,12 @@ document.addEventListener('DOMContentLoaded', function () {
         checkbox.autocomplete = 'off';
 
         let label = document.createElement('label');
-        label.className = 'btn btn'; // Adjust the class to match your existing buttons
+        label.className = 'btn btn';
         label.htmlFor = buttonId;
         label.textContent = tag;
 
         let colDiv = document.createElement('div');
-        colDiv.className = 'col-md-auto'; // Ensure horizontal alignment
+        colDiv.className = 'col-md-auto';
         colDiv.appendChild(checkbox);
         colDiv.appendChild(label);
 
@@ -35,10 +35,10 @@ document.addEventListener('DOMContentLoaded', function () {
       categories.forEach((category, index) => {
         const dropdownId = `dropdownMenuButton-${index}`;
         let dropdownDiv = document.createElement('div');
-        dropdownDiv.className = 'dropdown col-md-auto'; // Ensure horizontal alignment for categories
+        dropdownDiv.className = 'dropdown col-md-auto';
 
         let button = document.createElement('button');
-        button.className = 'btn btn dropdown-toggle'; // Adjust the class to match your existing buttons
+        button.className = 'btn btn dropdown-toggle';
         button.type = 'button';
         button.id = dropdownId;
         button.dataset.toggle = 'dropdown';
@@ -49,6 +49,7 @@ document.addEventListener('DOMContentLoaded', function () {
         let dropdownMenu = document.createElement('div');
         dropdownMenu.className = 'dropdown-menu';
         dropdownMenu.setAttribute('aria-labelledby', dropdownId);
+        dropdownMenu.style.textAlign = 'left'; // Left align the text in the dropdown
 
         // Filtering items by category and adding them to the dropdown
         data
@@ -65,6 +66,27 @@ document.addEventListener('DOMContentLoaded', function () {
         dropdownDiv.appendChild(dropdownMenu);
 
         categoryContainer.appendChild(dropdownDiv);
+      });
+
+      // Event listeners for .btn-check buttons and Clear Tags button
+      var toggleButtons = document.querySelectorAll('.btn-check');
+      var clearTagsButton = document.getElementById('clear-tags');
+
+      clearTagsButton.addEventListener('click', function () {
+        toggleButtons.forEach(function (toggleButton) {
+          toggleButton.checked = false;
+        });
+        clearTagsButton.classList.remove('active');
+      });
+
+      toggleButtons.forEach(function (toggleButton) {
+        toggleButton.addEventListener('change', function () {
+          if (Array.from(toggleButtons).some((button) => button.checked)) {
+            clearTagsButton.classList.add('active');
+          } else {
+            clearTagsButton.classList.remove('active');
+          }
+        });
       });
     })
     .catch((error) => console.error('Error loading JSON data:', error));

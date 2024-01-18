@@ -1,5 +1,37 @@
 @import 'scss/bootstrap.scss'; // Import Bootstrap
 
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono&display=swap');
+
+// Then, you c
+
+@mixin roboto-font($weight: 400, $size: 16px) {
+  font-family: 'Roboto', sans-serif;
+  font-weight: $weight;
+  font-size: $size;
+}
+
+@mixin noto-sans-font($weight: 400, $size: 16px) {
+  font-family: 'Noto Sans JP', sans-serif;
+  font-weight: $weight;
+  font-size: $size;
+}
+
+@mixin space-mono-font($weight: 400, $size: 16px) {
+  font-family: 'Space Mono', monospace;
+  font-weight: $weight;
+  font-size: $size;
+}
+
+@mixin box-bg-color($color: #a5a5a5) {
+  background-color: $color;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
 $page-bg-color: #c2c2c2; // Replace with your desired color
 // Define your custom variables
 $btn-bg-color: transparent;
@@ -26,13 +58,14 @@ body {
   background-color: $page-bg-color;
 }
 .btn {
+  @include space-mono-font(400, 16px);
   background-color: $btn-bg-color;
   color: $btn-text-color;
   padding: 0px 0px;
-  font-size: 16px;
   text-align: center;
   cursor: pointer;
   border: none;
+  display: inline-block;
 
   &:hover {
     color: $btn-hover-color;
@@ -109,35 +142,30 @@ body {
 }
 
 .dropdown-menu {
-  background-color: $page-bg-color;
+  @include box-bg-color;
+  @include space-mono-font(400, 16px);
   color: $btn-text-color;
-  font-size: 16px;
-  text-align: center;
+  text-align: left;
   border: none;
-  margin: 10px;
 }
 .dropdown-item {
   &:active,
   &:focus {
     background-color: $btn-bg-color;
     color: $btn-text-color;
-    font-size: 16px;
-    text-align: center;
     border: none;
   }
   &:hover {
     background-color: $btn-bg-color;
     color: $btn-hover-color;
-    font-size: 16px;
-    text-align: center;
     border: none;
   }
 }
 
 .menu-box {
-  background-color: #a5a5a5;
-  padding: 20px;
-  margin: 20px 0;
+  @include box-bg-color;
+  padding: 5px;
+  margin: 10px 0;
   border-radius: 5px;
   // Add more styling as needed
 }
@@ -167,5 +195,20 @@ body {
   &[readonly] {
     background-color: $input-disabled-bg;
     opacity: 1;
+  }
+}
+
+.clear-tags-container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+.clear-tags-button {
+  font-weight: normal;
+
+  &.active {
+    font-weight: 800;
+    background-color: #777777;
+    color: white;
   }
 }

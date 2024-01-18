@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap Split Button Dropdown Example</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="buttons-test-style.css"> <!-- Include the custom CSS file -->
+</head>
+
+<body>
+
+
+    <div class="menu-box">
+        <div class="container">
+            <div class="row justify-content-md-center">
+
+                <div class="col-md-auto">
+                    <input type="checkbox" class="btn-check" id="btn-check-1" autocomplete="off">
+                    <label class="btn btn" for="btn-check-1">Single toggle</label>
+                </div>
+                <div class="col-md-auto">
+                    <input type="checkbox" class="btn-check" id="btn-check-2" autocomplete="off">
+                    <label class="btn btn" for="btn-check-2">Single toggle</label>
+                </div>
+                <div class="col-md-auto">
+                    <input type="checkbox" class="btn-check" id="btn-check-3" autocomplete="off">
+                    <label class="btn btn" for="btn-check-3">Single toggle</label>
+                </div>
+
+            </div>
+        </div>
+        <div class="row justify-content-md-center">
+            <div class="col-md-auto">
+                <div class="dropdown">
+                    <button class="btn btn dropdown-toggle" type="button" id="dropdownMenuButton1"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Dropdown button
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                        <a class="dropdown-item" href="#">All</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">Temp item 1</a>
+                        <a class="dropdown-item" href="#">Temp item 2</a>
+                        <a class="dropdown-item" href="#">Temp item 3</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-auto">
+                <div class="dropdown">
+                    <button class="btn btn dropdown-toggle" type="button" id="dropdownMenuButton2"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Dropdown button
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton2">
+                        <a class="dropdown-item" href="#">All</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">Temp item 1</a>
+                        <a class="dropdown-item" href="#">Temp item 2</a>
+                        <a class="dropdown-item" href="#">Temp item 3</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="d-flex">
+            <div class="input-group input-group-sm w-50 mx-auto">
+
+                <input type="text" class="form-control" placeholder="Search" aria-label="Recipient's username"
+                    aria-describedby="button-addon2">
+                <button class="btn btn-outline" type="button" id="button-addon1">Search</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="menu-box">
+
+        <div class="container">
+            <!-- Placeholder for dynamically loaded tag checkboxes -->
+            <div id="tag-buttons" class="row justify-content-md-center">
+            </div>
+            <!-- Placeholder for dynamically loaded category dropdowns -->
+            <div id="category-buttons" class="row justify-content-md-center">
+            </div>
+        </div>
+
+        <div class="d-flex">
+            <div class="input-group input-group-sm w-50 mx-auto">
+                <input type="text" class="form-control" placeholder="Search" aria-label="Recipient's username"
+                    aria-describedby="button-addon2">
+                <button class="btn btn-outline" type="button" id="button-addon1">Search</button>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="buttons-test-dataLoader.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var toggleButtons = document.querySelectorAll('.btn-check');
+            toggleButtons.forEach(function (toggleButton) {
+                toggleButton.nextElementSibling.addEventListener('click', function () {
+                    toggleButton.checked = !toggleButton.checked;
+                });
+            });
+        });
+
+    </script>
+</body>
+
+</html>
